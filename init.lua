@@ -177,7 +177,7 @@ stairs.register_stair_and_slab("stonewall", "castle:stonewall",
 		default.node_sound_stone_defaults())
 
 minetest.register_craft({
-	output = "castle:stairs 4",
+	output = "stairs:stair_stonewall 4",
 	recipe = {
 		{"castle:stonewall","",""},
 		{"castle:stonewall","castle:stonewall",""},
