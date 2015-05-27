@@ -29,7 +29,7 @@ minetest.register_tool("castle:crossbow", {
 	inventory_image = "castle_crossbow.png",
     stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)
-		if castle_shoot_arrow(item, user, pointed_thing) then
+		if castle_shoot_arrow(itemstack, user, pointed_thing) then
 			if not minetest.setting_getbool("creative_mode") then
 				itemstack:add_wear(65535/200)
 			end
