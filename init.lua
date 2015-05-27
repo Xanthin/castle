@@ -12,7 +12,7 @@ minetest.register_node("castle:stonewall", {
 	description = "Castle Wall",
 	drawtype = "normal",
 	tiles = {"castle_stonewall.png"},
-	paramtype = light,
+	paramtype = "light",
 	drop = "castle:stonewall",
 	groups = {cracky=3},
 	
@@ -22,7 +22,7 @@ minetest.register_node("castle:rubble", {
 	description = "Castle Rubble",
 	drawtype = "normal",
 	tiles = {"castle_rubble.png"},
-	paramtype = light,
+	paramtype = "light",
 	groups = {crumbly=3,falling_node=1},
 })
 
@@ -51,7 +51,7 @@ minetest.register_craft({
 
 minetest.register_node("castle:stonewall_corner", {
 	drawtype = "normal",
-	paramtype = light,
+	paramtype = "light",
 	paramtype2 = "facedir",
 	description = "Castle Corner",
 	tiles = {"castle_stonewall.png", 
