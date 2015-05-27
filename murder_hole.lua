@@ -1,3 +1,4 @@
+local S = castle.intllib
 local hole = {}
 
 hole.types = {
@@ -19,7 +20,7 @@ for _, row in ipairs(hole.types) do
 	-- Node Definition
 	minetest.register_node("castle:hole_"..name, {
 	    drawtype = "nodebox",
-		description = desc.." Murder Hole",
+		description = S("@1 Murder Hole", S(desc)),
 		tiles = {tile..".png"},
 		groups = {cracky=3},
 		sounds = default.node_sound_defaults(),

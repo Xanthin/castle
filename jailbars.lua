@@ -1,3 +1,5 @@
+local S = castle.intllib
+
 -- xjailbarss mod by xyz
 
 local function rshift(x, by)
@@ -91,7 +93,7 @@ for i = 1, 15 do
 end
 
 minetest.register_node("castle:jailbars", {
-    description = "Jailbars",
+    description = S("Jailbars"),
     tiles = {"castle_space.png"},
     inventory_image = "castle_jailbars.png",
     wield_image = "castle_jailbars.png",

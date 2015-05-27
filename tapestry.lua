@@ -1,8 +1,9 @@
+local S = castle.intllib
 local tapestry = {}
 
 minetest.register_node("castle:tapestry_top", {
 	drawtype = "nodebox",
-         description = "Tapestry Top",
+	description = S("Tapestry Top"),
 	tiles = {"default_wood.png"},
 	sunlight_propagates = true,
 	groups = {flammable=3,oddly_breakable_by_hand=1},
@@ -53,13 +54,13 @@ for _, row in ipairs(tapestry.colours) do
 	local craft_color_group = row[3]
 	-- Node Definition
 	minetest.register_node("castle:tapestry_"..name, {
-	         drawtype = "nodebox",
-		description = desc.." Tapestry",
+		drawtype = "nodebox",
+		description = S("@1 Tapestry", S(desc)),
 		tiles = {"wool_"..name..".png"},
 		groups = {oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 		sounds = default.node_sound_defaults(),
-	         paramtype = "light",
-	         paramtype2 = "facedir",
+		paramtype = "light",
+		paramtype2 = "facedir",
 		node_box = {
 		    type = "fixed",
 		    fixed = {
@@ -97,13 +98,13 @@ for _, row in ipairs(tapestry.colours) do
 	local craft_color_group = row[3]
 	-- Node Definition
 	minetest.register_node("castle:long_tapestry_"..name, {
-	         drawtype = "nodebox",
-		description = desc.." Tapestry (Long)",
+		drawtype = "nodebox",
+		description = S("@1 Tapestry (Long)", S(desc)),
 		tiles = {"wool_"..name..".png"},
 		groups = {oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 		sounds = default.node_sound_defaults(),
-	         paramtype = "light",
-	         paramtype2 = "facedir",
+		paramtype = "light",
+		paramtype2 = "facedir",
 		node_box = {
 		    type = "fixed",
 		    fixed = {
@@ -141,13 +142,13 @@ for _, row in ipairs(tapestry.colours) do
 	local craft_color_group = row[3]
 	-- Node Definition
 	minetest.register_node("castle:very_long_tapestry_"..name, {
-	         drawtype = "nodebox",
-		description = desc.." Tapestry (Very Long)",
+		drawtype = "nodebox",
+		description = S("@1 Tapestry (Very Long)", S(desc)),
 		tiles = {"wool_"..name..".png"},
 		groups = {oddly_breakable_by_hand=3,flammable=3,not_in_creative_inventory=1},
 		sounds = default.node_sound_defaults(),
-	         paramtype = "light",
-	         paramtype2 = "facedir",
+		paramtype = "light",
+		paramtype2 = "facedir",
 		node_box = {
 		    type = "fixed",
 		    fixed = {

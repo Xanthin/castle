@@ -1,0 +1,105 @@
+# Template file for translations of Castles+
+# Last update: 2015/May/27
+
+### arrows.lua ###
+Arrow = 
+
+### arrowslit.lua ###
+Stonewall = 
+Cobble = 
+Stonebrick = 
+Sandstone Brick = 
+Desert Stone Brick = 
+Stone = 
+Sandstone = 
+Desert Stone = 
+@1 Arrowslit = 
+@1 Arrowslit with Cross = 
+@1 Arrowslit with Hole = 
+
+
+### corssbow.lua ###
+Crossbow = 
+
+### init.lua ###
+Castle Wall = 
+Castle Rubble = 
+Castle Corner = 
+Roof Slates = 
+Hides = 
+Castle Wall Stair = 
+Castle Wall Slab = 
+Oak Door = 
+Jail Door = 
+Ironbound Chest = 
+Ironbound Chest (owned by @1) = 
+@1 tried to access a locked chest belonging to @2 at @3 = 
+@1 moves stuff in locked chest at @2 = 
+@1 moves stuff to locked chest at @2 = 
+@1 takes stuff from locked chest at @2 = 
+Battleaxe = 
+
+### jailbars.lua ###
+Jailbars = 
+
+### murder_hole.lua ###
+@1 Murder Hole = 
+
+### orbs.lua ###
+Orb of Midday = 
+Orb of Midnight = 
+
+### pillars.lua ###
+@1 Pillar Base = 
+@1 Pillar Top = 
+@1 Pillar Middle = 
+
+### rope.lua ###
+Rope = 
+Rope from Ropebox = 
+Ropebox = 
+
+### shields_decor.lua ###
+Mounted Shield = 
+
+### tapestry.lua ###
+Tapestry Top = 
+White = 
+Grey = 
+Black = 
+Red = 
+Yellow = 
+Green = 
+Cyan = 
+Blue = 
+Magenta = 
+Orange = 
+Violet = 
+Dark Grey = 
+Dark Green = 
+Pink = 
+Brown = 
+@1 Tapestry = 
+@1 Tapestry (Long) = 
+@1 Tapestry (Very Long) = 
+
+### town_item.lua ###
+Anvil = 
+Workbench = 
+Source Material = 
+Recipe to Use = 
+Craft Output = 
+@1 moves stuff in workbench at @2 = 
+@1 moves stuff to workbench at @2 = 
+@1 takes stuff from workbench at @2 = 
+Dungeon Stone = 
+Crate = 
+@1 moves stuff in crate at @2 = 
+@1 moves stuff to crate at @2 = 
+@1 takes stuff from crate at @2 = 
+Straw = 
+Bound Straw = 
+Castle Straw Stair = 
+Castle Straw Slab = 
+Paving Stone = 
+Light Block = 

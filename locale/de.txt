@@ -1,0 +1,107 @@
+# German Translation for Castles+ Mod
+# Deutsche Übersetzung des Castles+ Mods
+# last update: 2015/May/27
+# Author: Xanthin
+
+### arrows.lua ###
+Arrow = Pfeil
+
+### arrowslit.lua ###
+Stonewall = Steinmauer
+Cobble = Bruchstein
+Stonebrick = Steinziegel
+Sandstone Brick = Sandsteinziegel
+Desert Stone Brick = Wüstensteinziegel
+Stone = Stein
+Sandstone = Sandstein
+Desert Stone = Wüstenstein
+@1 Arrowslit = @1 mit Bogenscharte
+@1 Arrowslit with Cross = @1 mit Kreuzscharte
+@1 Arrowslit with Hole = @1 mit Schlüsselscharte
+
+
+### corssbow.lua ###
+Crossbow = Armbrust
+
+### init.lua ###
+Castle Wall = Steinmauer
+Castle Rubble = Schutt
+Castle Corner = Steinmauerecke
+Roof Slates = Dachschiefer
+Hides = Tierhäute
+Castle Wall Stair = Steinmauertreppe
+Castle Wall Slab = Steinmauerstufe
+Oak Door = Eichentür
+Jail Door = Gefängnistür
+Ironbound Chest = Eisenbeschlagene Truhe
+Ironbound Chest (owned by @1) = Eisenbeschlagene Truhe (gehört @1)
+@1 tried to access a locked chest belonging to @2 at @3 = @1 versuchte bei @3 auf die verschlossene Truhe von @2 zuzugreifen
+@1 moves stuff in locked chest at @2 = @1 bewegt Dinge in einer verschlossenen Truhe bei @2
+@1 moves stuff to locked chest at @2 = @1 verlagert Dinge in eine verschlossene Truhe bei @2
+@1 takes stuff from locked chest at @2 = @1 nimmt Dinge aus einer verschlossenen Truhe bei @2
+Battleaxe = Streitaxt
+
+### jailbars.lua ###
+Jailbars = Gefängnisgitter
+
+### murder_hole.lua ###
+@1 Murder Hole = @1 mit Pechnase
+
+### orbs.lua ###
+Orb of Midday = Kugel der Mittagsstunde
+Orb of Midnight = Kugel der Mitternacht
+
+### pillars.lua ###
+@1 Pillar Base = Säulenbasis aus @1
+@1 Pillar Top = Säulenkopf aus @1
+@1 Pillar Middle = Säulenschaft aus @1
+
+### rope.lua ###
+Rope = Seil
+Rope from Ropebox = Seil von Seilwinde
+Ropebox = Seilwinde
+
+### shields_decor.lua ###
+Mounted Shield = Wandschild
+
+### tapestry.lua ###
+Tapestry Top = Wandteppichstange
+White = Weißer
+Grey = Grauer
+Black = Schwarzer
+Red = Roter
+Yellow = Gelber
+Green = Grüner
+Cyan = Türkiser
+Blue = Blauer
+Magenta = Magenta
+Orange = Oranger
+Violet = Violetter
+Dark Grey = Dunkelgrauer
+Dark Green = Dunkelgrüner
+Pink = Rosa
+Brown = Brauner
+@1 Tapestry = @1 Wandteppich
+@1 Tapestry (Long) = @1 Wandteppich (lang)
+@1 Tapestry (Very Long) = @1 Wandteppich (sehr lang)
+
+### town_item.lua ###
+Anvil = Amboss
+Workbench = Werkbank
+Source Material = Ausgangsmaterial
+Recipe to Use = Zu verwendendes Rezept
+Craft Output = Endprodukt
+@1 moves stuff in workbench at @2 = @1 bewegt Dinge in einer Werkbank bei @2
+@1 moves stuff to workbench at @2 = @1 verlagert Dinge in eine Werkbank bei @2
+@1 takes stuff from workbench at @2 = @1 nimmt Dinge aus einer Werkbank bei @2
+Dungeon Stone = Kerkerstein
+Crate = Kiste
+@1 moves stuff in crate at @2 = @1 bewegt Dinge in einer Kiste bei @2
+@1 moves stuff to crate at @2 = @1 verlagert Dinge in eine Kiste bei @2
+@1 takes stuff from crate at @2 = @1 nimmt Dinge aus einer Kiste bei @2
+Straw = Stroh
+Bound Straw = Gebundenes Stroh 
+Castle Straw Stair = Strohtreppe
+Castle Straw Slab = Strohstufe
+Paving Stone = Pflasterstein
+Light Block = Lichtblock

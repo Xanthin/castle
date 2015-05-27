@@ -1,3 +1,14 @@
+castle = {}
+
+-- Boilerplate to support localized strings if intllib mod is installed.
+local S
+if minetest.get_modpath("intllib") then
+	S = intllib.Getter()
+else
+	S = function(s) return s end
+end
+castle.intllib = S
+
 dofile(minetest.get_modpath("castle").."/pillars.lua")
 dofile(minetest.get_modpath("castle").."/arrowslit.lua")
 dofile(minetest.get_modpath("castle").."/tapestry.lua")
@@ -9,7 +20,7 @@ dofile(minetest.get_modpath("castle").."/orbs.lua")
 dofile(minetest.get_modpath("castle").."/rope.lua")
 
 minetest.register_node("castle:stonewall", {
-	description = "Castle Wall",
+	description = S("Castle Wall"),
 	drawtype = "normal",
 	tiles = {"castle_stonewall.png"},
 	paramtype = "light",
@@ -19,7 +30,7 @@ minetest.register_node("castle:stonewall", {
 })
 
 minetest.register_node("castle:rubble", {
-	description = "Castle Rubble",
+	description = S("Castle Rubble"),
 	drawtype = "normal",
 	tiles = {"castle_rubble.png"},
 	paramtype = "light",
@@ -53,7 +64,7 @@ minetest.register_node("castle:stonewall_corner", {
 	drawtype = "normal",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	description = "Castle Corner",
+	description = S("Castle Corner"),
 	tiles = {"castle_stonewall.png", 
 	                  "castle_stonewall.png",
 			"castle_corner_stonewall1.png", 
@@ -73,7 +84,7 @@ minetest.register_craft({
 
 minetest.register_node("castle:roofslate", {
 	drawtype = "raillike",
-	description = "Roof Slates",
+	description = S("Roof Slates"),
 	inventory_image = "castle_slate.png",
 	paramtype = "light",
 	walkable = false,
@@ -88,7 +99,7 @@ minetest.register_node("castle:roofslate", {
 
 minetest.register_node("castle:hides", {
 	drawtype = "signlike",
-	description = "Hides",
+	description = S("Hides"),
 	inventory_image = "castle_hide.png",
 	paramtype = "light",
 	walkable = false,
@@ -172,8 +183,8 @@ end
 stairs.register_stair_and_slab("stonewall", "castle:stonewall",
 		{cracky=3},
 		{"castle_stonewall.png"},
-		"Castle Wall Stair",
-		"Castle Wall Slab",
+		S("Castle Wall Stair"),
+		S("Castle Wall Slab"),
 		default.node_sound_stone_defaults())
 
 minetest.register_craft({
@@ -202,7 +213,7 @@ minetest.register_craft({
 })
 
 doors.register_door("castle:oak_door", {
-	description = "Oak Door",
+	description = S("Oak Door"),
 	inventory_image = "castle_oak_door_inv.png",
 	groups = {choppy=2,door=1},
 	tiles_bottom = {"castle_oak_door_bottom.png", "door_oak.png"},
@@ -211,7 +222,7 @@ doors.register_door("castle:oak_door", {
 })
 
 doors.register_door("castle:jail_door", {
-	description = "Jail Door",
+	description = S("Jail Door"),
 	inventory_image = "castle_jail_door_inv.png",
 	groups = {cracky=2,door=1},
 	tiles_bottom = {"castle_jail_door_bottom.png", "door_jail.png"},
@@ -255,7 +266,7 @@ end
 
 minetest.register_node("castle:ironbound_chest",{
 	drawtype = "nodebox",
-	description = "Ironbound Chest",
+	description = S("Ironbound Chest"),
 	tiles = {"castle_ironbound_chest_top.png",
 	                  "castle_ironbound_chest_top.png",
 			"castle_ironbound_chest_side.png",
@@ -285,12 +296,12 @@ minetest.register_node("castle:ironbound_chest",{
 	after_place_node = function(pos, placer)
 		local meta = minetest.get_meta(pos)
 		meta:set_string("owner", placer:get_player_name() or "")
-		meta:set_string("infotext", "Ironbound Chest (owned by "..
-				meta:get_string("owner")..")")
+		meta:set_string("infotext", S("Ironbound Chest (owned by @1)",
+			meta:get_string("owner")))
 	end,
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
-		meta:set_string("infotext", "Ironbound Chest")
+		meta:set_string("infotext", S("Ironbound Chest"))
 		meta:set_string("owner", "")
 		local inv = meta:get_inventory()
 		inv:set_size("main", 8*4)
@@ -303,10 +314,8 @@ minetest.register_node("castle:ironbound_chest",{
 	allow_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
 		local meta = minetest.get_meta(pos)
 		if not has_ironbound_chest_privilege(meta, player) then
-			minetest.log("action", player:get_player_name()..
-					" tried to access a locked chest belonging to "..
-					meta:get_string("owner").." at "..
-					minetest.pos_to_string(pos))
+			minetest.log("action", S("@1 tried to access a locked chest belonging to @2 at @3",
+					player:get_player_name(), meta:get_string("owner"), minetest.pos_to_string(pos)))
 			return 0
 		end
 		return count
@@ -314,10 +323,8 @@ minetest.register_node("castle:ironbound_chest",{
     allow_metadata_inventory_put = function(pos, listname, index, stack, player)
 		local meta = minetest.get_meta(pos)
 		if not has_ironbound_chest_privilege(meta, player) then
-			minetest.log("action", player:get_player_name()..
-					" tried to access a locked chest belonging to "..
-					meta:get_string("owner").." at "..
-					minetest.pos_to_string(pos))
+			minetest.log("action", S("@1 tried to access a locked chest belonging to @2 at @3",
+					player:get_player_name(), meta:get_string("owner"), minetest.pos_to_string(pos)))
 			return 0
 		end
 		return stack:get_count()
@@ -325,25 +332,23 @@ minetest.register_node("castle:ironbound_chest",{
     allow_metadata_inventory_take = function(pos, listname, index, stack, player)
 		local meta = minetest.get_meta(pos)
 		if not has_ironbound_chest_privilege(meta, player) then
-			minetest.log("action", player:get_player_name()..
-					" tried to access a locked chest belonging to "..
-					meta:get_string("owner").." at "..
-					minetest.pos_to_string(pos))
+			minetest.log("action", S("@1 tried to access a locked chest belonging to @2 at @3",
+					player:get_player_name(), meta:get_string("owner"), minetest.pos_to_string(pos)))
 			return 0
 		end
 		return stack:get_count()
 	end,
 	on_metadata_inventory_move = function(pos, from_list, from_index, to_list, to_index, count, player)
-		minetest.log("action", player:get_player_name()..
-				" moves stuff in locked chest at "..minetest.pos_to_string(pos))
+		minetest.log("action", S("@1 moves stuff in locked chest at @2",
+			player:get_player_name(), minetest.pos_to_string(pos)))
 	end,
     on_metadata_inventory_put = function(pos, listname, index, stack, player)
-		minetest.log("action", player:get_player_name()..
-				" moves stuff to locked chest at "..minetest.pos_to_string(pos))
+		minetest.log("action", S("@1 moves stuff to locked chest at @2",
+			player:get_player_name(), minetest.pos_to_string(pos)))
 	end,
     on_metadata_inventory_take = function(pos, listname, index, stack, player)
-		minetest.log("action", player:get_player_name()..
-				" takes stuff from locked chest at "..minetest.pos_to_string(pos))
+		minetest.log("action", S("@1 takes stuff from locked chest at @2",
+			player:get_player_name(), minetest.pos_to_string(pos)))
 	end,
 	on_rightclick = function(pos, node, clicker)
 		local meta = minetest.get_meta(pos)
@@ -366,7 +371,7 @@ minetest.register_craft({
 })
 
 minetest.register_tool("castle:battleaxe", {
-	description = "Battleaxe",
+	description = S("Battleaxe"),
 	inventory_image = "castle_battleaxe.png",
 	tool_capabilities = {
 		full_punch_interval = 2.0,

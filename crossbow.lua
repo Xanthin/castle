@@ -1,3 +1,5 @@
+local S = castle.intllib
+
 arrows = {
 	{"castle:arrow", "castle:arrow_entity"},
 }
@@ -25,7 +27,7 @@ local castle_shoot_arrow = function(itemstack, player)
 	return false
 end
 minetest.register_tool("castle:crossbow", {
-	description = "Crossbow",
+	description = S("Crossbow"),
 	inventory_image = "castle_crossbow.png",
     stack_max = 1,
 	on_use = function(itemstack, user, pointed_thing)

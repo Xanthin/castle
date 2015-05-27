@@ -1,5 +1,7 @@
+local S = castle.intllib
+
 minetest.register_craftitem("castle:arrow", {
-	description = "Arrow",
+	description = S("Arrow"),
 	inventory_image = "castle_arrow.png",
 })
 
