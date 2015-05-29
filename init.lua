@@ -21,20 +21,20 @@ dofile(minetest.get_modpath("castle").."/rope.lua")
 
 minetest.register_node("castle:stonewall", {
 	description = S("Castle Wall"),
-	drawtype = "normal",
 	tiles = {"castle_stonewall.png"},
-	paramtype = "light",
-	drop = "castle:stonewall",
 	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults(),
 	
 })
 
 minetest.register_node("castle:rubble", {
 	description = S("Castle Rubble"),
-	drawtype = "normal",
 	tiles = {"castle_rubble.png"},
-	paramtype = "light",
 	groups = {crumbly=3,falling_node=1},
+	sounds = default.node_sound_dirt_defaults({
+		footstep = {name="default_gravel_footstep", gain=0.5},
+		dug = {name="default_gravel_footstep", gain=1.0},
+	}),
 })
 
 minetest.register_craft({
@@ -61,8 +61,6 @@ minetest.register_craft({
 })
 
 minetest.register_node("castle:stonewall_corner", {
-	drawtype = "normal",
-	paramtype = "light",
 	paramtype2 = "facedir",
 	description = S("Castle Corner"),
 	tiles = {"castle_stonewall.png", 
@@ -72,6 +70,7 @@ minetest.register_node("castle:stonewall_corner", {
 			"castle_stonewall.png", 
 			"castle_corner_stonewall2.png"},
 	groups = {cracky=3},
+	sounds = default.node_sound_stone_defaults(),
 })
 
 minetest.register_craft({
@@ -86,6 +85,7 @@ minetest.register_node("castle:roofslate", {
 	drawtype = "raillike",
 	description = S("Roof Slates"),
 	inventory_image = "castle_slate.png",
+	wield_image = "castle_slate.png",
 	paramtype = "light",
 	walkable = false,
 	tiles = {'castle_slate.png'},
@@ -95,22 +95,24 @@ minetest.register_node("castle:roofslate", {
                 fixed = {-1/2, -1/2, -1/2, 1/2, -1/2+1/16, 1/2},
 	},
 	groups = {cracky=3,attached_node=1},
+	sounds = default.node_sound_stone_defaults(),
 })
 
 minetest.register_node("castle:hides", {
 	drawtype = "signlike",
 	description = S("Hides"),
 	inventory_image = "castle_hide.png",
+	wield_image = "castle_hide.png",
 	paramtype = "light",
 	walkable = false,
 	tiles = {'castle_hide.png'},
-	climbable = true,
 	paramtype2 = "wallmounted",
 	legacy_wallmounted = true,
 	groups = {dig_immediate=2},
 	selection_box = {
 		type = "wallmounted",
 	},
+	sounds = default.node_sound_defaults(),
 })
 
 
@@ -219,6 +221,8 @@ doors.register_door("castle:oak_door", {
 	tiles_bottom = {"castle_oak_door_bottom.png", "door_oak.png"},
 	tiles_top = {"castle_oak_door_top.png", "door_oak.png"},
 	only_placer_can_open = true,
+	sounds = default.node_sound_wood_defaults(),
+	sunlight = false,
 })
 
 doors.register_door("castle:jail_door", {
@@ -228,6 +232,8 @@ doors.register_door("castle:jail_door", {
 	tiles_bottom = {"castle_jail_door_bottom.png", "door_jail.png"},
 	tiles_top = {"castle_jail_door_top.png", "door_jail.png"},
 	only_placer_can_open = true,
+	sounds = default.node_sound_wood_defaults(),
+	sunlight = true,
 })
 
 minetest.register_craft({

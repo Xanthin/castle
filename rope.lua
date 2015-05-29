@@ -9,6 +9,7 @@ minetest.register_node("castle:ropes",{
 	paramtype = "light",
 	climbable = true,
 	walkable = false,
+	sounds = default.node_sound_leaves_defaults(),
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -42,6 +43,7 @@ minetest.register_node("castle:box_rope", {
     climbable = true,
     walkable = false,
     diggable = false,
+    sounds = default.node_sound_leaves_defaults(),
 	node_box = {
 		type = "fixed",
 		fixed = {
@@ -75,6 +77,7 @@ minetest.register_node("castle:ropebox", {
     paramtype = "light",
     paramtype2 = "facedir",
     groups = {choppy=3},
+    sounds = default.node_sound_wood_defaults(),
 	node_box = {
 		type = "fixed",
 		fixed = {

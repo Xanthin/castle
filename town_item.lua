@@ -13,6 +13,7 @@ minetest.register_node("castle:anvil",{
 	description = S("Anvil"),
 	tiles = {"castle_steel.png"},
 	groups = {cracky=2,falling_node=1},
+	sounds = default.node_sound_stone_defaults(),
 	paramtype = "light",
 	paramtype2 = "facedir",
 	node_box = {
@@ -40,9 +41,8 @@ minetest.register_node("castle:workbench",{
 	description = S("Workbench"),
 	tiles = {"castle_workbench_top.png", "default_wood.png", "castle_workbench_1.png", "castle_workbench_1.png", "castle_workbench_2.png", "castle_workbench_2.png"},
 	paramtype2 = "facedir",
-	paramtype = "light",
 	groups = {choppy=2,oddly_breakable_by_hand=2,flammable=2},
-	drawtype = "normal",
+	sounds = default.node_sound_wood_defaults(),
     on_construct = function ( pos )
         local meta = minetest.get_meta( pos )
 		meta:set_string( 'formspec', 'size[10,10;]' ..
@@ -174,10 +174,9 @@ minetest.register_craft({
 
 minetest.register_node("castle:dungeon_stone", {
 	description = S("Dungeon Stone"),
-	drawtype = "normal",
 	tiles = {"castle_dungeon_stone.png"},
 	groups = {cracky=2},
-	paramtype = "light",
+	sounds = default.node_sound_stone_defaults(),
 })
 
 minetest.register_craft({
@@ -198,10 +197,9 @@ minetest.register_craft({
 
 minetest.register_node("castle:crate", {
 	description = S("Crate"),
-	drawtype = "normal",
 	tiles = {"castle_crate_top.png","castle_crate_top.png","castle_crate.png","castle_crate.png","castle_crate.png","castle_crate.png"},
 	groups = {choppy=3},
-	paramtype = "light",
+	sounds = default.node_sound_wood_defaults(),
 	on_construct = function(pos)
 		local meta = minetest.get_meta(pos)
 		meta:set_string("formspec",
@@ -248,10 +246,9 @@ minetest.register_craft({
 
 minetest.register_node("castle:straw", {
 	description = S("Straw"),
-	drawtype = "normal",
 	tiles = {"castle_straw.png"},
 	groups = {choppy=4, flammable=1, oddly_breakable_by_hand=3},
-	paramtype = "light",
+	sounds = default.node_sound_leaves_defaults(),
 })
 
 minetest.register_craft({
@@ -264,10 +261,9 @@ minetest.register_craft({
 
 minetest.register_node("castle:bound_straw", {
 	description = S("Bound Straw"),
-	drawtype = "normal",
 	tiles = {"castle_straw_bale.png"},
 	groups = {choppy=4, flammable=1, oddly_breakable_by_hand=3},
-	paramtype = "light",
+	sounds = default.node_sound_leaves_defaults(),
 })
 
 minetest.register_craft({
@@ -286,10 +282,9 @@ stairs.register_stair_and_slab("straw", "castle:straw",
 
 minetest.register_node("castle:pavement", {
 	description = S("Paving Stone"),
-	drawtype = "normal",
 	tiles = {"castle_pavement_brick.png"},
 	groups = {cracky=2},
-	paramtype = "light",
+	sounds = default.node_sound_stone_defaults(),
 })
 
 minetest.register_craft({
@@ -309,6 +304,7 @@ minetest.register_node("castle:light",{
 	tiles = {"castle_street_light.png"},
 	groups = {cracky=2},
 	paramtype = "light",
+	sounds = default.node_sound_glass_defaults(),
 })
 
 minetest.register_craft({

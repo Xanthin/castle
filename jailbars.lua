@@ -81,6 +81,7 @@ for i = 1, 15 do
         paramtype = "light",
         groups = {cracky=2},
         drop = "castle:jailbars",
+        sounds = default.node_sound_stone_defaults(),
         node_box = {
             type = "fixed",
             fixed = take
@@ -97,6 +98,7 @@ minetest.register_node("castle:jailbars", {
     tiles = {"castle_space.png"},
     inventory_image = "castle_jailbars.png",
     wield_image = "castle_jailbars.png",
+    sounds = default.node_sound_stone_defaults(),
     node_placement_prediction = "",
     on_construct = update_jailbars
 })

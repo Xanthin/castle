@@ -28,7 +28,7 @@ for _, row in ipairs(pillar.types) do
 		description = S("@1 Pillar Base", S(desc)),
 		tiles = {tile..".png"},
 		groups = {cracky=3,attached_node=1},
-		sounds = default.node_sound_defaults(),
+		sounds = default.node_sound_stone_defaults(),
 	    paramtype = "light",
 	    paramtype2 = "facedir",
 	node_box = {
@@ -45,7 +45,7 @@ for _, row in ipairs(pillar.types) do
 		description = S("@1 Pillar Top", S(desc)),
 		tiles = {tile..".png"},
 		groups = {cracky=3,attached_node=1},
-		sounds = default.node_sound_defaults(),
+		sounds = default.node_sound_stone_defaults(),
 	    paramtype = "light",
 	    paramtype2 = "facedir",
 	node_box = {
@@ -62,7 +62,7 @@ for _, row in ipairs(pillar.types) do
 		description = S("@1 Pillar Middle", S(desc)),
 		tiles = {tile..".png"},
 		groups = {cracky=3,attached_node=1},
-		sounds = default.node_sound_defaults(),
+		sounds = default.node_sound_stone_defaults(),
 	    paramtype = "light",
 	    paramtype2 = "facedir",
 	node_box = {

@@ -7,7 +7,7 @@ minetest.register_node("castle:tapestry_top", {
 	tiles = {"default_wood.png"},
 	sunlight_propagates = true,
 	groups = {flammable=3,oddly_breakable_by_hand=1},
-	sounds = default.node_sound_defaults(),
+	sounds = default.node_sound_wood_defaults(),
 	paramtype = "light",
 	paramtype2 = "facedir",
 	node_box = {
