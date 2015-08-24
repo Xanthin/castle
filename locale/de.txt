@@ -1,5 +1,5 @@
-# German Translation for Castles+ Mod
-# Deutsche Übersetzung des Castles+ Mods
+ï»¿# German Translation for Castles+ Mod
+# Deutsche Ãœbersetzung des Castles+ Mods
 # last update: 2015/May/27
 # Author: Xanthin
 
@@ -11,13 +11,13 @@ Stonewall = Steinmauer
 Cobble = Bruchstein
 Stonebrick = Steinziegel
 Sandstone Brick = Sandsteinziegel
-Desert Stone Brick = Wüstensteinziegel
+Desert Stone Brick = WÃ¼stensteinziegel
 Stone = Stein
 Sandstone = Sandstein
-Desert Stone = Wüstenstein
+Desert Stone = WÃ¼stenstein
 @1 Arrowslit = @1 mit Bogenscharte
 @1 Arrowslit with Cross = @1 mit Kreuzscharte
-@1 Arrowslit with Hole = @1 mit Schlüsselscharte
+@1 Arrowslit with Hole = @1 mit SchlÃ¼sselscharte
 
 
 ### corssbow.lua ###
@@ -28,13 +28,13 @@ Castle Wall = Steinmauer
 Castle Rubble = Schutt
 Castle Corner = Steinmauerecke
 Roof Slates = Dachschiefer
-Hides = Tierhäute
+Hides = TierhÃ¤ute
 Castle Wall Stair = Steinmauertreppe
 Castle Wall Slab = Steinmauerstufe
-Oak Door = Eichentür
-Jail Door = Gefängnistür
+Oak Door = EichentÃ¼r
+Jail Door = GefÃ¤ngnistÃ¼r
 Ironbound Chest = Eisenbeschlagene Truhe
-Ironbound Chest (owned by @1) = Eisenbeschlagene Truhe (gehört @1)
+Ironbound Chest (owned by @1) = Eisenbeschlagene Truhe (gehÃ¶rt @1)
 @1 tried to access a locked chest belonging to @2 at @3 = @1 versuchte bei @3 auf die verschlossene Truhe von @2 zuzugreifen
 @1 moves stuff in locked chest at @2 = @1 bewegt Dinge in einer verschlossenen Truhe bei @2
 @1 moves stuff to locked chest at @2 = @1 verlagert Dinge in eine verschlossene Truhe bei @2
@@ -42,7 +42,7 @@ Ironbound Chest (owned by @1) = Eisenbeschlagene Truhe (gehört @1)
 Battleaxe = Streitaxt
 
 ### jailbars.lua ###
-Jailbars = Gefängnisgitter
+Jailbars = GefÃ¤ngnisgitter
 
 ### murder_hole.lua ###
 @1 Murder Hole = @1 mit Pechnase
@@ -52,9 +52,9 @@ Orb of Midday = Kugel der Mittagsstunde
 Orb of Midnight = Kugel der Mitternacht
 
 ### pillars.lua ###
-@1 Pillar Base = Säulenbasis aus @1
-@1 Pillar Top = Säulenkopf aus @1
-@1 Pillar Middle = Säulenschaft aus @1
+@1 Pillar Base = SÃ¤ulenbasis aus @1
+@1 Pillar Top = SÃ¤ulenkopf aus @1
+@1 Pillar Middle = SÃ¤ulenschaft aus @1
 
 ### rope.lua ###
 Rope = Seil
@@ -66,19 +66,19 @@ Mounted Shield = Wandschild
 
 ### tapestry.lua ###
 Tapestry Top = Wandteppichstange
-White = Weißer
+White = WeiÃŸer
 Grey = Grauer
 Black = Schwarzer
 Red = Roter
 Yellow = Gelber
-Green = Grüner
-Cyan = Türkiser
+Green = GrÃ¼ner
+Cyan = TÃ¼rkiser
 Blue = Blauer
 Magenta = Magenta
 Orange = Oranger
 Violet = Violetter
 Dark Grey = Dunkelgrauer
-Dark Green = Dunkelgrüner
+Dark Green = DunkelgrÃ¼ner
 Pink = Rosa
 Brown = Brauner
 @1 Tapestry = @1 Wandteppich
